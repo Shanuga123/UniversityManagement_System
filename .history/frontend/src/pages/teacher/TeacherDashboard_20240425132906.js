@@ -35,7 +35,7 @@ const TeacherDashboard = () => {
             <Box sx={{ display: 'flex' }}>
                 <CssBaseline />
                 <AppBar open={open} position='absolute'>
-                    <Toolbar sx={{ pr: '24px',  backgroundColor: '#080A43'}}>
+                    <Toolbar sx={{ pr: '24px'}}>
                         <IconButton
                             edge="start"
                             color="inherit"

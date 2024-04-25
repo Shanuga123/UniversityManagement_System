@@ -93,7 +93,7 @@ const Title = styled.p`
 
 const Data = styled(CountUp)`
   font-size: calc(1.3rem + .6vw);
-  color:#080A43;
+  color: green;
 `;
 
 export default TeacherHomePage
