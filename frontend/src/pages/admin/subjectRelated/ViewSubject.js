@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { getClassStudents, getSubjectDetails } from '../../../redux/sclassRelated/sclassHandle';
-import { useNavigate, useParams } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { Box, Tab, Container, Typography, BottomNavigation, BottomNavigationAction, Paper } from '@mui/material';
-import { BlueButton, GreenButton, PurpleButton } from '../../../components/buttonStyles';
-import TableTemplate from '../../../components/TableTemplate';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+import { BottomNavigation, BottomNavigationAction, Box, Container, Paper, Tab, Typography } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate, useParams } from 'react-router-dom';
+import bgpic from "../../../assets/subjectbg.jpg";
+import TableTemplate from '../../../components/TableTemplate';
+import { BlueButton, GreenButton, PurpleButton } from '../../../components/buttonStyles';
+import { getClassStudents, getSubjectDetails } from '../../../redux/sclassRelated/sclassHandle';
 import './ViewSubject.css';
 
 
@@ -150,7 +151,8 @@ const ViewSubject = () => {
     const numberOfStudents = sclassStudents.length;
 
     return (
-      <div style={styles.container}>
+      <div style={styles.container} >
+      <div style={styles.overlay}>
         <div style={styles.details}>
           <h2 style={styles.heading}> Subject Details</h2>
           <div style={styles.gifContainer}>
@@ -190,6 +192,7 @@ const ViewSubject = () => {
             Add Subject Teacher
           </GreenButton>
         }
+      </div>
       </div>
     );
   };
@@ -234,8 +237,16 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '100vh',
-    background: 'linear-gradient(to right, #455a64, #607d8b)',
+    height: '630px',
+    backgroundImage: `url(${bgpic})`,
+    backgroundSize: 'cover', // Ensures the background image covers the container
+  },
+  overlay: {
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(7, 0, 134, 0.59)', // Adjust the opacity (last value) as needed
   },
   details: {
     backgroundColor: '#f9f9f9',
@@ -250,7 +261,7 @@ const styles = {
   heading: {
     textAlign: 'center',
     marginBottom: '20px',
-    color: '#333',
+    color: '#051650',
   },
   gifContainer: {
     textAlign: 'center',

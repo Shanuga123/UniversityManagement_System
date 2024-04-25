@@ -223,7 +223,7 @@ const ClassDetailsSection = () => {
     const numberOfStudents = sclassStudents.length;
 
     return (
-        <div >
+        
         <div style={styles.container}>
         
         
@@ -248,7 +248,7 @@ const ClassDetailsSection = () => {
                 </div>
             </div>
         </div>
-        </div>
+        
         
         
 
