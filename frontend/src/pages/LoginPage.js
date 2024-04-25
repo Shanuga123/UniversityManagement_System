@@ -135,7 +135,7 @@ const LoginPage = ({ role }) => {
                             alignItems: 'center',
                         }}
                     >
-                        <Typography variant="h4" sx={{ mb: 2, color: "#2c2143" }}>
+                        <Typography variant="h4" sx={{ mb: 2, color: "#2832C2" }}>
                             {role} Login
                         </Typography>
                         <Typography variant="h7">
@@ -222,21 +222,21 @@ const LoginPage = ({ role }) => {
                                     Forgot password?
                                 </StyledLink>
                             </Grid>
-                            <LightPurpleButton
+                            <Button
                                 type="submit"
                                 fullWidth
                                 variant="contained"
                                 sx={{ mt: 3 }}
                             >
                                 {loader ?
-                                    <CircularProgress size={24} color="inherit" />
+                                    <CircularProgress size={24} color="#1520A6" />
                                     : "Login"}
-                            </LightPurpleButton>
+                            </Button>
                             <Button
                                 fullWidth
                                 onClick={guestModeHandler}
                                 variant="outlined"
-                                sx={{ mt: 2, mb: 3, color: "#7f56da", borderColor: "#7f56da" }}
+                                sx={{ mt: 2, mb: 3, color: "#2832C2", borderColor: "#2832C2" }}
                             >
                                 Login as Guest
                             </Button>
@@ -287,5 +287,6 @@ export default LoginPage
 const StyledLink = styled(Link)`
   margin-top: 9px;
   text-decoration: none;
-  color: #7f56da;
+  color: #2832C2;
 `;
+
