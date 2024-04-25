@@ -1,14 +1,14 @@
-import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { Button, Grid, Box, Typography, Paper, Checkbox, FormControlLabel, TextField, CssBaseline, IconButton, InputAdornment, CircularProgress, Backdrop } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-import bgpic from "../assets/designlogin.jpg"
-import { LightPurpleButton } from '../components/buttonStyles';
+import { Backdrop, Box, Button, Checkbox, CircularProgress, CssBaseline, FormControlLabel, Grid, IconButton, InputAdornment, Paper, TextField, Typography } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { loginUser } from '../redux/userRelated/userHandle';
+import bgpic from "../assets/designlogin1.jpg";
 import Popup from '../components/Popup';
+import { LightPurpleButton } from '../components/buttonStyles';
+import { loginUser } from '../redux/userRelated/userHandle';
 
 const defaultTheme = createTheme();
 
