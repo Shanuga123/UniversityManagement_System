@@ -1,0 +1,9 @@
+.css-156ompn-MuiContainer-root {
+    padding-left: 0 !important; /* Override the left padding */
+    padding-right: 0 !important; /* Override the right padding */
+    /* Add the following line to ensure paddings are removed at all viewport widths */
+    @media (min-width: 600px) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
