@@ -11,11 +11,9 @@ import { BlackButton, BlueButton, GreenButton } from '../../../components/button
 import TableTemplate from '../../../components/TableTemplate';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import SpeedDialTemplate from '../../../components/SpeedDialTemplate';
-
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-// import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { KeyboardArrowUp, KeyboardArrowDown } from '@mui/icons-material';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Grow from '@mui/material/Grow';
@@ -110,13 +108,16 @@ const ShowStudents = () => {
         };
         return (
             <>
-                <IconButton onClick={() => deleteHandler(row.id, "Student")}>
+                <IconButton onClick={() => deleteHandler(row.id, "Student")} style={{ marginRight: '10px' }}>
                     <PersonRemoveIcon color="error" />
+                    
                 </IconButton>
+                
                 <BlueButton variant="contained"
-                    onClick={() => navigate("/Admin/students/student/" + row.id)}>
+                    onClick={() => navigate("/Admin/students/student/" + row.id)} style={{ marginRight: '10px' }}>
                     View
                 </BlueButton>
+
                 <React.Fragment>
                     <ButtonGroup variant="contained" ref={anchorRef} aria-label="split button">
                         <Button onClick={handleClick}>{options[selectedIndex]}</Button>

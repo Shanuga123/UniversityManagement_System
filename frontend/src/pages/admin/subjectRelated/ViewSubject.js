@@ -186,9 +186,9 @@ const ViewSubject = () => {
           </div>
        
         {!subjectDetails.teacher &&
-          <GreenButton variant="contained" onClick={() => navigate("/Admin/teachers/addteacher/" + subjectDetails._id)}>
+          <BlueButton variant="contained" onClick={() => navigate("/Admin/teachers/addteacher/" + subjectDetails._id)}>
             Add Subject Teacher
-          </GreenButton>
+          </BlueButton>
         }
       </div>
     );
@@ -234,7 +234,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '630px',
+    height: '100vh',
     backgroundImage: `url(${bgpic})`,
     backgroundSize: 'cover',
   },

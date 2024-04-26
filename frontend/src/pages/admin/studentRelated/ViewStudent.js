@@ -19,6 +19,8 @@ import TableChartIcon from '@mui/icons-material/TableChart';
 import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
 import Popup from '../../../components/Popup';
 import './ViewStudent.css';
+import bgpic from "../../../assets/studentbg.png";
+import { RedButton } from './../../../components/buttonStyles';
 
 const ViewStudent = () => {
     const [showTab, setShowTab] = useState(false);
@@ -365,9 +367,9 @@ const ViewStudent = () => {
                                     <CustomPieChart data={chartData} />
                                 )
                             }
-                            <Button variant="contained" sx={styles.styledButton} onClick={deleteHandler}>
+                            <RedButton variant="contained" sx={styles.styledButton} onClick={deleteHandler}>
                                 Delete
-                            </Button>
+                            </RedButton>
                         </div>
                     </div>
                 </div>
@@ -428,7 +430,8 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
-        background: 'linear-gradient(to right, #455a64, #607d8b)',
+        backgroundImage: `url(${bgpic})`,
+        backgroundSize: 'cover',
     },
     details: {
         backgroundColor: '#f9f9f9',
@@ -443,7 +446,7 @@ const styles = {
     heading: {
         textAlign: 'center',
         marginBottom: '20px',
-        color: '#333',
+        color: '#051650',
     },
     gifContainer: {
         textAlign: 'center',
