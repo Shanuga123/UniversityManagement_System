@@ -20,7 +20,7 @@ import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
 import Popup from '../../../components/Popup';
 import './ViewStudent.css';
 import bgpic from "../../../assets/studentbg.png";
-import { RedButton } from './../../../components/buttonStyles';
+import { RedButton, BlueButton } from './../../../components/buttonStyles';
 
 const ViewStudent = () => {
     const [showTab, setShowTab] = useState(false);
@@ -224,9 +224,9 @@ const ViewStudent = () => {
                         Overall Attendance Percentage: {overallAttendancePercentage.toFixed(2)}%
                     </div>
                     <Button variant="contained" color="error" startIcon={<DeleteIcon />} onClick={() => removeHandler(studentID, "RemoveStudentAtten")}>Delete All</Button>
-                    <Button variant="contained" sx={styles.styledButton} onClick={() => navigate("/Admin/students/student/attendance/" + studentID)}>
+                    <BlueButton variant="contained" sx={styles.styledButton} onClick={() => navigate("/Admin/students/student/attendance/" + studentID)}>
                         Add Attendance
-                    </Button>
+                    </BlueButton>
                 </>
             )
         }
@@ -435,7 +435,7 @@ const styles = {
     },
     details: {
         backgroundColor: '#f9f9f9',
-        paddingLeft: '80px',
+        paddingLeft: '50px',
         border: '1px solid #ccc',
         borderRadius: '8px',
         maxWidth: '700px',
