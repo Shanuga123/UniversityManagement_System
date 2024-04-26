@@ -1,8 +1,10 @@
+import { Button } from '@mui/material';
 import React, { useEffect } from 'react';
-import { getTeacherDetails } from '../../../redux/teacherRelated/teacherHandle';
-import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button } from '@mui/material'; // Assuming you already have imported Container and Typography elsewhere
+import { useNavigate, useParams } from 'react-router-dom';
+import bgpic from "../../../assets/teacherbg.png"; // Assuming you already have imported Container and Typography elsewhere
+import { getTeacherDetails } from '../../../redux/teacherRelated/teacherHandle';
+import TeacherGif from '../teacherRelated/teachergif/teacher.gif';
 
 // Import or define styles and ClassRoomGif if not done elsewhere
 
@@ -37,8 +39,8 @@ const TeacherDetails = () => {
                     
                     <div style={styles.details}>
                     <h2 style={styles.heading}>Teacher Details</h2>
-                        <div style={styles.gifContainer}>
-                            {/* {teacherDetails && <img src={ClassRoomGif} alt="User Profile GIF" style={styles.gif} />} */}
+                    <div style={styles.gifContainer}>
+                    { <img src={TeacherGif} alt="teacher Profile GIF" style={styles.gif} /> }
                         </div>
                         <div style={styles.info}>
                             <div style={styles.field}>
@@ -82,7 +84,8 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
-        background: 'linear-gradient(to right, #455a64, #607d8b)',
+        backgroundImage: `url(${bgpic})`,
+        backgroundSize: 'cover',
     },
     details: {
         backgroundColor: '#f9f9f9',
@@ -97,7 +100,7 @@ const styles = {
     heading: {
         textAlign: 'center',
         marginBottom: '20px',
-        color: '#333',
+        color: '#051650',
     },
     gifContainer: {
         textAlign: 'center',

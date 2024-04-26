@@ -1,3 +1,7 @@
+import InsertChartIcon from '@mui/icons-material/InsertChart';
+import InsertChartOutlinedIcon from '@mui/icons-material/InsertChartOutlined';
+import TableChartIcon from '@mui/icons-material/TableChart';
+import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
@@ -7,13 +11,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import bgpic from "../../../assets/subjectbg.png";
 import TableTemplate from '../../../components/TableTemplate';
-import { BlueButton, GreenButton, PurpleButton,WhiteButton } from '../../../components/buttonStyles';
+import { BlueButton, GreenButton, WhiteButton } from '../../../components/buttonStyles';
 import { getClassStudents, getSubjectDetails } from '../../../redux/sclassRelated/sclassHandle';
 import './ViewSubject.css';
-import InsertChartIcon from '@mui/icons-material/InsertChart';
-import InsertChartOutlinedIcon from '@mui/icons-material/InsertChartOutlined';
-import TableChartIcon from '@mui/icons-material/TableChart';
-import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
 
 const ViewSubject = () => {
   const navigate = useNavigate();
