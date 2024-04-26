@@ -44,7 +44,23 @@ export const BlueButton = styled(Button)`
     background-color: #080a43;
     color: #fff;
     &:hover {
-      background-color: #0a1e82;
+      background-color: #fff;
+      color: #080a43;
+    }
+  }
+`;
+
+export const WhiteButton = styled(Button)`
+  && {
+    background-color: #fff;
+    color:#080a43;
+    border-color: #080a43;
+    border-style: solid;
+    border-width: 1px;
+    &:hover {
+      background-color: #080a43;
+      color: #fff;
+      
     }
   }
 `;

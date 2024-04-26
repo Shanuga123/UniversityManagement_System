@@ -5,16 +5,11 @@ import { BottomNavigation, BottomNavigationAction, Box, Container, Paper, Tab, T
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import bgpic from "../../../assets/subjectbg.jpg";
+import bgpic from "../../../assets/subjectbg.png";
 import TableTemplate from '../../../components/TableTemplate';
-import { BlueButton, GreenButton, PurpleButton } from '../../../components/buttonStyles';
+import { BlueButton, GreenButton, PurpleButton,WhiteButton } from '../../../components/buttonStyles';
 import { getClassStudents, getSubjectDetails } from '../../../redux/sclassRelated/sclassHandle';
 import './ViewSubject.css';
-
-
-
-
-
 import InsertChartIcon from '@mui/icons-material/InsertChart';
 import InsertChartOutlinedIcon from '@mui/icons-material/InsertChartOutlined';
 import TableChartIcon from '@mui/icons-material/TableChart';
@@ -67,17 +62,18 @@ const ViewSubject = () => {
         <BlueButton
           variant="contained"
           onClick={() => navigate("/Admin/students/student/" + row.id)}
+          style={{ marginRight: '10px' }}
         >
           View
         </BlueButton>
-        <PurpleButton
+        <WhiteButton
           variant="contained"
           onClick={() =>
             navigate(`/Admin/subject/student/attendance/${row.id}/${subjectID}`)
           }
         >
           Take Attendance
-        </PurpleButton>
+        </WhiteButton>
       </>
     );
   };
@@ -88,13 +84,14 @@ const ViewSubject = () => {
         <BlueButton
           variant="contained"
           onClick={() => navigate("/Admin/students/student/" + row.id)}
+          style={{ marginRight: '10px' }}
         >
           View
         </BlueButton>
-        <PurpleButton variant="contained"
+        <WhiteButton variant="contained"
           onClick={() => navigate(`/Admin/subject/student/marks/${row.id}/${subjectID}`)}>
           Provide Marks
-        </PurpleButton>
+        </WhiteButton>
       </>
     );
   };
@@ -151,8 +148,8 @@ const ViewSubject = () => {
     const numberOfStudents = sclassStudents.length;
 
     return (
-      <div style={styles.container} >
-      <div style={styles.overlay}>
+      <div style={styles.container}>
+      
         <div style={styles.details}>
           <h2 style={styles.heading}> Subject Details</h2>
           <div style={styles.gifContainer}>
@@ -186,13 +183,13 @@ const ViewSubject = () => {
               </div>
             }
           </div>
-        </div>
+          </div>
+       
         {!subjectDetails.teacher &&
           <GreenButton variant="contained" onClick={() => navigate("/Admin/teachers/addteacher/" + subjectDetails._id)}>
             Add Subject Teacher
           </GreenButton>
         }
-      </div>
       </div>
     );
   };
@@ -239,15 +236,9 @@ const styles = {
     alignItems: 'center',
     height: '630px',
     backgroundImage: `url(${bgpic})`,
-    backgroundSize: 'cover', // Ensures the background image covers the container
+    backgroundSize: 'cover',
   },
-  overlay: {
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'rgba(7, 0, 134, 0.59)', // Adjust the opacity (last value) as needed
-  },
+
   details: {
     backgroundColor: '#f9f9f9',
     paddingLeft: '30px',
