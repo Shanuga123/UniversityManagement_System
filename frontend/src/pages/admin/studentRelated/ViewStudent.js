@@ -20,7 +20,7 @@ import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
 import Popup from '../../../components/Popup';
 import './ViewStudent.css';
 import bgpic from "../../../assets/studentbg.png";
-import { RedButton, BlueButton } from './../../../components/buttonStyles';
+import { RedButton, BlueButton, WhiteButton } from './../../../components/buttonStyles';
 
 const ViewStudent = () => {
     const [showTab, setShowTab] = useState(false);
@@ -177,10 +177,10 @@ const ViewStudent = () => {
                                             <IconButton onClick={() => removeSubAttendance(subId)}>
                                                 <DeleteIcon color="error" />
                                             </IconButton>
-                                            <Button variant="contained" sx={styles.attendanceButton}
+                                            <WhiteButton variant="contained" sx={styles.attendanceButton}
                                                 onClick={() => navigate(`/Admin/subject/student/attendance/${studentID}/${subId}`)}>
                                                 Change
-                                            </Button>
+                                            </WhiteButton>
                                         </StyledTableCell>
                                     </StyledTableRow>
                                     <StyledTableRow>
@@ -261,9 +261,9 @@ const ViewStudent = () => {
                         </Paper>
                     </>
                     :
-                    <Button variant="contained" sx={styles.styledButton} onClick={() => navigate("/Admin/students/student/attendance/" + studentID)}>
+                    <BlueButton variant="contained" sx={styles.styledButton} onClick={() => navigate("/Admin/students/student/attendance/" + studentID)}>
                         Add Attendance
-                    </Button>
+                    </BlueButton>
                 }
             </>
         )
@@ -295,9 +295,9 @@ const ViewStudent = () => {
                             })}
                         </TableBody>
                     </Table>
-                    <Button variant="contained" sx={styles.styledButton} onClick={() => navigate("/Admin/students/student/marks/" + studentID)}>
+                    <BlueButton variant="contained" sx={styles.styledButton} onClick={() => navigate("/Admin/students/student/marks/" + studentID)}>
                         Add Marks
-                    </Button>
+                    </BlueButton>
                 </>
             )
         }
@@ -332,9 +332,9 @@ const ViewStudent = () => {
                         </Paper>
                     </>
                     :
-                    <Button variant="contained" sx={styles.styledButton} onClick={() => navigate("/Admin/students/student/marks/" + studentID)}>
+                    <BlueButton variant="contained" sx={styles.styledButton} onClick={() => navigate("/Admin/students/student/marks/" + studentID)}>
                         Add Marks
-                    </Button>
+                    </BlueButton>
                 }
             </>
         )
