@@ -19,6 +19,7 @@ import Popup from "../../../components/Popup";
 import DeleteIcon from "@mui/icons-material/Delete";
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import ClassRoomGif from '../classRelated/classgif/classroom.gif'; 
+import bgpic from "../../../assets/classbg.png"; 
 
 const ClassDetails = () => {
     const params = useParams()
@@ -305,8 +306,9 @@ const styles = {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            backgroundImage: `url(${bgpic})`,
             height: '100vh',
-            background: 'linear-gradient(to right, #455a64, #607d8b)',
+            backgroundSize: 'cover',
         },
         details: {
             backgroundColor: '#f9f9f9',

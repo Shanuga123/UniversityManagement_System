@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { authLogout } from '../redux/userRelated/userSlice';
 import styled from 'styled-components';
+import logoutpic from "../assets/logoutimg.png"; 
 
 const Logout = () => {
     const currentUser = useSelector(state => state.user.currentUser);
@@ -21,6 +22,9 @@ const Logout = () => {
 
     return (
         <LogoutContainer>
+            
+            <img src={logoutpic} alt="User Profile GIF" style={styles.image} />
+    
             <h1>{currentUser.name}</h1>
             <LogoutMessage>Are you sure you want to log out?</LogoutMessage>
             <LogoutButtonLogout onClick={handleLogout}>Log Out</LogoutButtonLogout>
@@ -30,18 +34,20 @@ const Logout = () => {
 };
 
 export default Logout;
+const styles={
+  image:{
+    height:'250px',
+    width:'200px',
+  }
+}
 
 const LogoutContainer = styled.div`
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
+  padding: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  background-color: #85769f66;
-  color: black;
+  color: #051650;
 `;
 
 const LogoutMessage = styled.p`
@@ -58,16 +64,24 @@ const LogoutButton = styled.button`
   color: #fff;
   cursor: pointer;
 
-  &:hover {
-    color: #fff;
-    background-color: #333;
-  }
+  
 `;
 
 const LogoutButtonLogout = styled(LogoutButton)`
-  background-color: #ea0606;
+  background-color: #FF0000;
+  border-color:#FF0000;
+  &:hover {
+    color: #FF0000;
+    background-color: #fff;
+  }
+
 `;
 
 const LogoutButtonCancel = styled(LogoutButton)`
-  background-color: rgb(99, 60, 99);
+  background-color: #051650;
+  border-color:#051650;
+  &:hover {
+    color: #051650;
+    background-color: #fff;
+  }
 `;

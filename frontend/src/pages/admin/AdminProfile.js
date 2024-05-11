@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import userProfileGif from '../admin/admingif/userProfile.gif'; // Import your GIF file
+import bgpic from "../../assets/adminprofilebg.png"; 
 
 const AdminProfile = () => {
     const { currentUser } = useSelector((state) => state.user);
@@ -37,8 +38,9 @@ const styles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundImage: `url(${bgpic})`,
         height: '100vh',
-        background: 'linear-gradient(to right, #455a64, #607d8b)',
+        backgroundSize: 'cover',
     },
     details: {
         backgroundColor: '#f9f9f9',
@@ -53,7 +55,7 @@ const styles = {
     heading: {
         textAlign: 'center',
         marginBottom: '20px',
-        color: '#333',
+        color: '#051650',
     },
     gifContainer: {
         textAlign: 'center',
