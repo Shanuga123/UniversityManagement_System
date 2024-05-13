@@ -35,7 +35,7 @@ const scrollToContact = () => {
 };
     return (
         <div>
-            <Navbar>
+            <Navbar style={{ backgroundColor: '#080a43' }}>
                 <NavBrand to="/">Uni Management System</NavBrand>
                 <NavLinks>
                 <NavLink to="/" onClick={scrollToWelcome}>About</NavLink>
@@ -231,7 +231,7 @@ const StyledBox = styled(Box)`
 
 const StyledTitle = styled.h1`
   font-size: 2rem;
-  color: #252525;
+  color: #080a43;
   font-weight: bold;
   padding-top: 50px;
   padding-left:50px;
@@ -256,12 +256,21 @@ const StyledLink = styled(Link)`
 const CoursesSection = styled.section`
   padding: 50px 0;
   text-align: center;
+
+  h2{
+    color: #080A43;
+  }
 `;
 
+
+
 const CoursesGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap : wrap;
   gap: 20px;
+  align-items: center;
+  justify-content: center;
+  
   margin-top: 30px;
   padding:30px;
 `;
@@ -275,7 +284,8 @@ const CourseCard = styled.div`
   background-size: cover;
   background-position: center;
   position: relative;
-  height: 200px;
+  height: 300px;
+  width: 300px;
   display: flex; /* Use flexbox for centering */
   flex-direction: column; /* Arrange content vertically */
   justify-content: center; /* Center vertically */
@@ -283,12 +293,29 @@ const CourseCard = styled.div`
   
   &:hover {
     transform: translateY(-5px);
-    height: 300px; /* Adjust height to accommodate expanded content */
+  }
+
+  /* Overlay */
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 1, 81, 0.7); /* Adjust overlay color and opacity */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+  }
+
+  &:hover::after {
+    opacity: 1; /* Show overlay on hover */
   }
   
   h3 {
     margin-bottom: 10px;
-    color: #080A43;
+    color: #fff;
+    background-color: #080A43;
     text-align: center; /* Center the text */
     position: absolute; /* Position at the top */
     top: 50%; /* Move to the middle vertically */
@@ -296,6 +323,7 @@ const CourseCard = styled.div`
     transform: translate(-50%, -50%); /* Adjust for both horizontal and vertical centering */
     width: 100%; /* Take full width */
     transition: top 0.3s ease; /* Added transition for smooth movement */
+    z-index: 1; /* Ensure it's above the overlay */
   }
 
   p {
@@ -303,6 +331,7 @@ const CourseCard = styled.div`
     font-weight: bold;
     display: none; /* Hide paragraph text by default */
     text-align: center; /* Center the text */
+    z-index: 1; /* Ensure it's above the overlay */
   }
 
   &:hover h3 {
@@ -315,11 +344,13 @@ const CourseCard = styled.div`
 `;
 
 
-
-
 const FacultySection = styled.section`
   padding: 50px 0;
   text-align: center;
+
+  h2{
+    color: #080A43;
+  }
 `;
 
 const FacultyGrid = styled.div`
@@ -336,10 +367,11 @@ const FacultyCard = styled.div`
   overflow: hidden;
   
   img {
-    width: 100%;
-    max-width: 200px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
-    border-bottom: 1px solid #ddd;
+    border: 3px solid #080A43;
+    padding: 10px;
   }
   
   h3 {
@@ -385,7 +417,7 @@ const TestimonialCard = styled.div`
 `;
 
 const Footer = styled.footer`
-  background-color: #333;
+  background-color: #080A43;
   color: #fff;
   padding: 30px 0;
   text-align: center;
