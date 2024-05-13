@@ -10,7 +10,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import { resetSubjects } from "../../../redux/sclassRelated/sclassSlice";
-import { BlueButton, PurpleButton } from "../../../components/buttonStyles";
+import { BlueButton, PurpleButton,WhiteButton } from "../../../components/buttonStyles";
 import TableTemplate from "../../../components/TableTemplate";
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
@@ -116,9 +116,9 @@ const ClassDetails = () => {
                         </BlueButton>
                     </Box>
                     :
-                    <Card sx={{ mt: 2 }}>
+                    <Card sx={{ mt: 2 }} style={{marginTop:50}}>
                         <CardContent>
-                            <Typography variant="h5" gutterBottom>
+                            <Typography variant="h5" gutterBottom style={{color:'#080a43'}}>
                                 Subjects List:
                             </Typography>
                             <TableTemplate buttonHaver={SubjectsButtonHaver} columns={subjectColumns} rows={subjectRows} />
@@ -183,7 +183,7 @@ const ClassDetails = () => {
         return (
             <>
                 {getresponse ? (
-                    <Card sx={{ mt: 2 }}>
+                    <Card sx={{ mt: 2 }} >
                         <CardContent>
                             <Typography variant="h5" gutterBottom>
                                 Students List:
@@ -195,7 +195,7 @@ const ClassDetails = () => {
                     </Card>
                 ) : (
                     <>
-                        <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '66px' }}>
                             <BlueButton
                                 variant="contained"
                                 onClick={() => navigate("/Admin/class/addstudents/" + classID)}

@@ -31,7 +31,8 @@ const TeacherProfile = () => {
 export default TeacherProfile
 
 const ProfileCard = styled(Card)`
-  margin: 20px;
+  align-item: center;
+  justify-content: center;
   width: 400px;
   border-radius: 10px;
 `;

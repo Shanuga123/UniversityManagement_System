@@ -14,7 +14,7 @@ const StudentProfile = () => {
 
   return (
     <>
-      <Container maxWidth="md">
+      <Container maxWidth="md" style={{marginTop: 40}}>
         <StyledPaper elevation={3}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
@@ -26,7 +26,7 @@ const StudentProfile = () => {
             </Grid>
             <Grid item xs={12}>
               <Box display="flex" justifyContent="center">
-                <Typography variant="h5" component="h2" textAlign="center">
+                <Typography variant="h5" component="h2" textAlign="center" color='#080a43' fontWeight='500' >
                   {currentUser.name}
                 </Typography>
               </Box>
@@ -54,12 +54,12 @@ const StudentProfile = () => {
             </Grid>
           </Grid>
         </StyledPaper>
-        <Card>
-          <CardContent>
-            <Typography variant="h6" gutterBottom>
-              Personal Information
+        <Card style={{backgroundColor:'#080a43', color:'#fff'}}>
+          <CardContent >
+            <Typography variant="h6" gutterBottom style={{textAlign:'center'}}>
+              <u>Personal Information</u>
             </Typography>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} style={{paddingLeft:70}}>
               <Grid item xs={12} sm={6}>
                 <Typography variant="subtitle1" component="p">
                   <strong>Date of Birth:</strong> January 1, 2000
@@ -103,4 +103,5 @@ export default StudentProfile
 const StyledPaper = styled(Paper)`
   padding: 20px;
   margin-bottom: 20px;
+  
 `;

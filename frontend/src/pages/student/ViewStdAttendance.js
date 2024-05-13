@@ -64,7 +64,7 @@ const ViewStdAttendance = () => {
     const renderTableSection = () => {
         return (
             <>
-                <Typography variant="h4" align="center" gutterBottom>
+                <Typography variant="h4" align="center" gutterBottom style={{ color: '#080a43', margin: 10 }}>
                     Attendance
                 </Typography>
                 <Table>
@@ -88,7 +88,7 @@ const ViewStdAttendance = () => {
                                     <StyledTableCell>{sessions}</StyledTableCell>
                                     <StyledTableCell>{subjectAttendancePercentage}%</StyledTableCell>
                                     <StyledTableCell align="center">
-                                        <Button variant="contained"
+                                        <Button variant="contained" style={{ backgroundColor : '#080a43', }} 
                                             onClick={() => handleOpen(subId)}>
                                             {openStates[subId] ? <KeyboardArrowUp /> : <KeyboardArrowDown />}Details
                                         </Button>
@@ -132,7 +132,7 @@ const ViewStdAttendance = () => {
                     }
                     )}
                 </Table>
-                <div>
+                <div style={{ color : '#080a43', fontWeight:400, fontSize:20 }}>
                     Overall Attendance Percentage: {overallAttendancePercentage.toFixed(2)}%
                 </div>
             </>

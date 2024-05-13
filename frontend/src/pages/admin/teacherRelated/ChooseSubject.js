@@ -4,7 +4,7 @@ import { Box, Table, TableBody, TableContainer, TableHead, Typography, Paper } f
 import { useNavigate, useParams } from 'react-router-dom';
 import { getTeacherFreeClassSubjects } from '../../../redux/sclassRelated/sclassHandle';
 import { updateTeachSubject } from '../../../redux/teacherRelated/teacherHandle';
-import { GreenButton, PurpleButton } from '../../../components/buttonStyles';
+import { GreenButton, PurpleButton, BlueButton } from '../../../components/buttonStyles';
 import { StyledTableCell, StyledTableRow } from '../../../components/styles';
 
 const ChooseSubject = ({ situation }) => {
@@ -85,14 +85,14 @@ const ChooseSubject = ({ situation }) => {
                                                 Choose
                                             </GreenButton>
                                             :
-                                            <GreenButton variant="contained" disabled={loader}
+                                            <BlueButton variant="contained" disabled={loader}
                                                 onClick={() => updateSubjectHandler(teacherID, subject._id)}>
                                                 {loader ? (
                                                     <div className="load"></div>
                                                 ) : (
                                                     'Choose Sub'
                                                 )}
-                                            </GreenButton>}
+                                            </BlueButton>}
                                     </StyledTableCell>
                                 </StyledTableRow>
                             ))}

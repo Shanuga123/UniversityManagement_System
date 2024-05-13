@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom'
 import { getClassStudents } from "../../redux/sclassRelated/sclassHandle";
 import { Paper, Box, Typography, ButtonGroup, Button, Popper, Grow, ClickAwayListener, MenuList, MenuItem } from '@mui/material';
-import { BlackButton, BlueButton} from "../../components/buttonStyles";
+import { BlackButton, BlueButton, WhiteButton} from "../../components/buttonStyles";
 import TableTemplate from "../../components/TableTemplate";
 import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
 
@@ -84,13 +84,15 @@ const TeacherClassDetails = () => {
                     onClick={() =>
                         navigate("/Teacher/class/student/" + row.id)
                     }
+                    style={{ marginRight: '10px' }}
                 >
                     View
                 </BlueButton>
+                
                 <React.Fragment>
                     <ButtonGroup variant="contained" ref={anchorRef} aria-label="split button">
-                        <Button onClick={handleClick}>{options[selectedIndex]}</Button>
-                        <BlackButton
+                        <WhiteButton onClick={handleClick}>{options[selectedIndex]}</WhiteButton>
+                        <BlueButton
                             size="small"
                             aria-controls={open ? 'split-button-menu' : undefined}
                             aria-expanded={open ? 'true' : undefined}
@@ -99,7 +101,7 @@ const TeacherClassDetails = () => {
                             onClick={handleToggle}
                         >
                             {open ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
-                        </BlackButton>
+                        </BlueButton>
                     </ButtonGroup>
                     <Popper
                         sx={{
@@ -149,7 +151,7 @@ const TeacherClassDetails = () => {
                 <div>Loading...</div>
             ) : (
                 <>
-                    <Typography variant="h4" align="center" gutterBottom>
+                    <Typography variant="h4" align="center" gutterBottom color='#080a43' marginTop='20'>
                         Class Details
                     </Typography>
                     {getresponse ? (

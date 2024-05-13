@@ -124,11 +124,13 @@ const StyledPaper = styled(Paper)`
 
 const Title = styled.p`
   font-size: 1.25rem;
+  color:#080A43;
 `;
 
 const Data = styled(CountUp)`
   font-size: calc(1.3rem + .6vw);
-  color: green;
+  color: #080A43, 
+    
 `;
 
 

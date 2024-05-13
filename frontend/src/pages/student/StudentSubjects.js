@@ -10,6 +10,7 @@ import InsertChartOutlinedIcon from '@mui/icons-material/InsertChartOutlined';
 import TableChartIcon from '@mui/icons-material/TableChart';
 import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
 import { StyledTableCell, StyledTableRow } from '../../components/styles';
+import bgpic from "../../assets/classbg.png";
 
 const StudentSubjects = () => {
 
@@ -152,8 +153,9 @@ const styles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh',
-        background: 'linear-gradient(to right, #455a64, #607d8b)',
+        backgroundImage: `url(${bgpic})`,
+            height: '100vh',
+            backgroundSize: 'cover',
     },
     details: {
         backgroundColor: '#f9f9f9',
@@ -168,7 +170,7 @@ const styles = {
     heading: {
         textAlign: 'center',
         marginBottom: '20px',
-        color: '#333',
+        color: '#080a43',
     },
     gifContainer: {
         textAlign: 'center',
@@ -191,7 +193,7 @@ const styles = {
     },
     label: {
         fontWeight: 'bold',
-        color: '#555',
+        color: 'green',
         marginRight: '10px',
         flexBasis: '30%',
     },
