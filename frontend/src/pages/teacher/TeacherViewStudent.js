@@ -60,14 +60,14 @@ const TeacherViewStudent = () => {
     ];
 
     return (
-        <>
+        <div style={{display:'flex', justifyContent:'center', alignItems:'center', height:'100vh'}}>
             {loading
                 ?
                 <>
                     <div>Loading...</div>
                 </>
                 :
-                <div>
+                <div style={{display:'flex', flexDirection:'column' ,justifyContent:'center', alignItems:'center', textAlign:'center', backgroundColor:'#fff', width:'500px', paddingTop:'30px' }}>
                     Name: {userDetails.name}
                     <br />
                     Roll Number: {userDetails.rollNum}
@@ -209,7 +209,7 @@ const TeacherViewStudent = () => {
                     <br /><br /><br />
                 </div>
             }
-        </>
+        </div>
     )
 }
 

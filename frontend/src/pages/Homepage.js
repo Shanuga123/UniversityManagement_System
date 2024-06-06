@@ -10,6 +10,7 @@ import AgriImage from '../assets/agri.jpg';
 import ManagementImage from '../assets/market.jpg';
 import MedicineImage from '../assets/med.jpg';
 import AppliedImage from '../assets/applied.jpg';
+import { Facebook, Twitter, YouTube, Instagram } from "@mui/icons-material"
 import SocialImage from '../assets/social.jpg';
 import { BlueButton, LightPurpleButton } from '../components/buttonStyles';
 
@@ -146,6 +147,7 @@ const scrollToContact = () => {
                     </FacultyGrid>
                 </FacultySection>
                 </div>
+
                 {/* <TestimonialsSection>
                     <h2>What Our Students Say</h2>
                     <TestimonialSlider>
@@ -159,14 +161,60 @@ const scrollToContact = () => {
                         </TestimonialCard>
                     </TestimonialSlider>
                 </TestimonialsSection> */}
+              
+                  <ContactSection>
+                  <div className="contact-column">
+                      <form>
+                        <input type="email" placeholder="Enter your email" required />
+                        <textarea placeholder="Enter your question" required></textarea>
+                        <button type="submit">Submit</button>
+                      </form>
+                    </div>
+                    <div className="contact-column">
+                      <img src="contact.png" alt="Contact" />
+                    </div>
+                    
+                  </ContactSection>
+  
                 
                 <Footer ref={contactSectionRef}>
+                  <div className="footer-column">
+                    <h2>University Management</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <div className="social-icons">
+                        <Facebook className="icon"/>
+                        <Instagram className="icon"/>
+                        <Twitter className="icon"/>
+                        <YouTube className="icon"/>
+                    </div>
+                  </div>
+                  <div className="footer-column">
+                    <h2>Quick Links</h2>
+                    <ul>
+                      <li><a href="#home">Home</a></li>
+                      <li><a href="#services">Services</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                    </ul>
+                  </div>
+                  <div className="footer-column">
+                    <h2>Resources</h2>
+                    <ul>
+                      <li><a href="#blog">Blog</a></li>
+                      <li><a href="#faq">FAQ</a></li>
+                      <li><a href="#support">Support</a></li>
+                    </ul>
+                  </div>
+                  <div className="footer-column">
+                    <h2>Newsletter</h2>
+                    <p>Subscribe to our newsletter</p>
+                    <div className="newsletter">
+                      <input type="email" placeholder="Your email" />
+                      <button type="submit">Submit</button>
+                    </div>
+                  </div>
+                  <div className="footer-column" style={{ flexBasis: "100%", textAlign: "center" }}>
                     <p>&copy; 2024 Uni Management System. All rights reserved.</p>
-                    <SocialIcons>
-                        <a href="#"><i className="fab fa-facebook-f"></i></a>
-                        <a href="#"><i className="fab fa-twitter"></i></a>
-                        <a href="#"><i className="fab fa-instagram"></i></a>
-                    </SocialIcons>
+                  </div>
                 </Footer>
             
         </div>
@@ -416,12 +464,127 @@ const TestimonialCard = styled.div`
   }
 `;
 
+const ContactSection = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 40px;
+  background-color: #f9f9f9;
+  justify-content: center;
+  align-items: center;
+  
+  .contact-column {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radious: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 40px 0;
+      
+      input, textarea {
+        width: 100%;
+        max-width: 500px;
+        padding: 10px;
+        margin-bottom: 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #080A43;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+`;
+
 const Footer = styled.footer`
   background-color: #080A43;
   color: #fff;
   padding: 30px 0;
   text-align: center;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 0px 20px;
+    margin: 10px;
+    
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      
+      li {
+        margin-bottom: 5px;
+      }
+    }
+    
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      
+      a {
+        margin: 0 5px;
+        color: #fff;
+        font-size: 20px;
+      }
+    }
+    
+    .newsletter {
+      input {
+        padding: 10px;
+        margin-right: 5px;
+        border: none;
+        border-radius: 5px;
+      }
+      
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #f15a24;
+        color: #fff;
+        cursor: pointer;
+        
+        &:hover {
+          background-color: #d14e20;
+        }
+      }
+    }
+  }
 `;
 
 

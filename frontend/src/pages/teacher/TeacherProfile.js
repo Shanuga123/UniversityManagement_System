@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { Card, CardContent, Typography } from '@mui/material';
 import { useSelector } from 'react-redux';
+import bgpic from "../../assets/teacher_bg.png";
 
 const TeacherProfile = () => {
   const { currentUser, response, error } = useSelector((state) => state.user);
@@ -14,7 +15,7 @@ const TeacherProfile = () => {
   const teachSchool = currentUser.school
 
   return (
-    <>
+    <div style={styles.container}>
       <ProfileCard>
         <ProfileCardContent>
           <ProfileText>Name: {currentUser.name}</ProfileText>
@@ -24,12 +25,20 @@ const TeacherProfile = () => {
           <ProfileText>School: {teachSchool.schoolName}</ProfileText>
         </ProfileCardContent>
       </ProfileCard>
-    </>
+    </div>
   )
 }
 
 export default TeacherProfile
-
+const styles = {
+  container: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundImage: `url(${bgpic})`,
+      height: '100vh',
+      backgroundSize: 'cover',
+  },}
 const ProfileCard = styled(Card)`
   align-item: center;
   justify-content: center;
