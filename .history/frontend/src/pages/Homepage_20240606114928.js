@@ -153,7 +153,7 @@ const scrollToContact = () => {
                 </div>
 
                 <TestimonialsSection>
-                    <h2><u>What Our Students Say</u></h2>
+                    <h2>What Our Students Say</h2>
                     <TestimonialSlider>
                         <TestimonialCard>
                             <p>"The courses offered here are comprehensive and engaging. I've learned so much and feel well-prepared for my career."</p>
@@ -331,7 +331,7 @@ const CoursesSection = styled.section`
   }
 `;
 
-const TestimonialsSection = styled.section`
+const ourCsesSection = styled.section`
   padding: 50px 0;
   text-align: center;
 
@@ -461,7 +461,10 @@ const FacultyCard = styled.div`
   }
 `;
 
-
+const TestimonialsSection = styled.section`
+  padding: 50px 0;
+  text-align: center;
+`;
 
 const TestimonialSlider = styled.div`
   display: flex;

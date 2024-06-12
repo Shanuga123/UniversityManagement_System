@@ -53,12 +53,8 @@ const scrollToContact = () => {
                     <Grid item xs={12} md={6}>
                         <StyledPaper elevation={3}>
                         <StyledTitle ref={welcomeSectionRef}>
-                                WELCOME TO 
+                                Welcome to Uni Management System
                             </StyledTitle>
-
-                            <StyledTitle1 ref={welcomeSectionRef}>
-                                University Management System
-                            </StyledTitle1>
                             <StyledText>
                                 Streamline University management, class organization, and add students and faculty.
                                 Seamlessly track attendance, assess performance, and provide feedback.
@@ -89,7 +85,7 @@ const scrollToContact = () => {
                 </Grid>
                 <div ref={coursesSectionRef}>
                 <CoursesSection>
-                <h2><u>Explore Our Courses</u></h2>
+                <h2>Explore Our Courses</h2>
                 <CoursesGrid>
                     <CourseCard style={{ backgroundImage: `url(${ComputerScienceImage})` }}>
                         <h3>Computing</h3>
@@ -131,7 +127,7 @@ const scrollToContact = () => {
             </div>
             <div ref={facultySectionRef}>
                 <FacultySection>
-                    <h2><u>Meet Our Faculty</u></h2>
+                    <h2>Meet Our Faculty</h2>
                     <FacultyGrid>
                         <FacultyCard>
                             <img src="faculty1.jpg" alt="Faculty 1" />
@@ -153,7 +149,7 @@ const scrollToContact = () => {
                 </div>
 
                 <TestimonialsSection>
-                    <h2><u>What Our Students Say</u></h2>
+                    <h2>What Our Students Say</h2>
                     <TestimonialSlider>
                         <TestimonialCard>
                             <p>"The courses offered here are comprehensive and engaging. I've learned so much and feel well-prepared for my career."</p>
@@ -179,7 +175,7 @@ const scrollToContact = () => {
                       </form>
                     </div>
                     <div className="contact-column">
-                      <img src="contactus.jpg" alt="Contact" />
+                      <img src="contact.png" alt="Contact" />
                     </div>
                     
                   </ContactSection>
@@ -285,28 +281,17 @@ const StyledBox = styled(Box)`
   padding: 24px;
 `;
 
-const StyledTitle = styled.p`
-  font-size: 1.5rem;
- 
-
+const StyledTitle = styled.h1`
+  font-size: 2rem;
+  color: #080a43;
+  font-weight: bold;
   padding-top: 50px;
   padding-left:50px;
   letter-spacing: normal;
   line-height: normal;
-  margin:0px;
-   /* Adjust as needed */
+  margin-bottom: 20px; /* Adjust as needed */
 `;
-const StyledTitle1 = styled.h1`
-  font-size: 2rem;
-  color: #080a43;
-  font-weight: bold;
-  
-  padding-left:50px;
-  letter-spacing: normal;
-  line-height: normal;
-  margin:0px;
-   /* Adjust as needed */
-`;
+
 const StyledText = styled.p`
   margin-top: 20px; /* Adjust as needed */
   margin-bottom: 10px; /* Adjust as needed */
@@ -314,7 +299,6 @@ const StyledText = styled.p`
   line-height: normal;
   padding-left:50px;
   text-align:justify;
-  
   
 `;
 
@@ -331,14 +315,7 @@ const CoursesSection = styled.section`
   }
 `;
 
-const TestimonialsSection = styled.section`
-  padding: 50px 0;
-  text-align: center;
 
-  h2{
-    color: #080A43;
-  }
-`;
 
 const CoursesGrid = styled.div`
   display: flex;
@@ -461,7 +438,10 @@ const FacultyCard = styled.div`
   }
 `;
 
-
+const TestimonialsSection = styled.section`
+  padding: 50px 0;
+  text-align: center;
+`;
 
 const TestimonialSlider = styled.div`
   display: flex;
