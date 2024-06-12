@@ -116,11 +116,11 @@ const AdminRegisterPage = () => {
                                 required
                                 fullWidth
                                 id="schoolName"
-                                label="Create your university name"
+                                label="Create your school name"
                                 name="schoolName"
                                 autoComplete="off"
                                 error={schoolNameError}
-                                helperText={schoolNameError && 'university name is required'}
+                                helperText={schoolNameError && 'School name is required'}
                                 onChange={handleInputChange}
                             />
                             <TextField

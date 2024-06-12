@@ -92,7 +92,7 @@ const AdminRegisterPage = () => {
                             Admin Register
                         </Typography>
                         <Typography variant="h7">
-                            Create your Details by registering as an admin.
+                            Create your own school by registering as an admin.
                             <br />
                             You will be able to add students and faculty and
                             manage the system.
@@ -116,11 +116,11 @@ const AdminRegisterPage = () => {
                                 required
                                 fullWidth
                                 id="schoolName"
-                                label="Create your university name"
+                                label="Create your school name"
                                 name="schoolName"
                                 autoComplete="off"
                                 error={schoolNameError}
-                                helperText={schoolNameError && 'university name is required'}
+                                helperText={schoolNameError && 'School name is required'}
                                 onChange={handleInputChange}
                             />
                             <TextField

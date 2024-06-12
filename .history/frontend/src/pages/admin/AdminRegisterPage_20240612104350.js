@@ -120,7 +120,7 @@ const AdminRegisterPage = () => {
                                 name="schoolName"
                                 autoComplete="off"
                                 error={schoolNameError}
-                                helperText={schoolNameError && 'university name is required'}
+                                helperText={schoolNameError && 'School name is required'}
                                 onChange={handleInputChange}
                             />
                             <TextField
