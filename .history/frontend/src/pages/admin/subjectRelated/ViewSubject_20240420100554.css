@@ -1,6 +1,0 @@
-@media (min-width: 600px) {
-    .custom-container-padding .MuiContainer-root {
-      padding-left: 0 ;
-      padding-right: 0 !important;
-    }
-  }
