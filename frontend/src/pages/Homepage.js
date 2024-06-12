@@ -9,6 +9,7 @@ import TechImage from '../assets/tech.jpg';
 import AgriImage from '../assets/agri.jpg';
 import ManagementImage from '../assets/market.jpg';
 import MedicineImage from '../assets/med.jpg';
+import BannerImage from '../assets/homebg.png';
 import AppliedImage from '../assets/applied.jpg';
 import { Facebook, Twitter, YouTube, Instagram } from "@mui/icons-material"
 import SocialImage from '../assets/social.jpg';
@@ -45,6 +46,8 @@ const scrollToContact = () => {
                 <NavLink to="/" onClick={scrollToContact}>Contact</NavLink>
                 </NavLinks>
             </Navbar>
+
+            <Banner src={BannerImage} alt="Banner" />
             
                 <Grid container spacing={0}>
                     <Grid item xs={12} md={6}>
@@ -260,6 +263,13 @@ const NavLink = styled(Link)`
   &:hover {
     color: #007bff;
   }
+`;
+
+const Banner = styled.img`
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 0;
 `;
 
 const StyledContainer = styled(Container)`
@@ -583,6 +593,7 @@ const Footer = styled.footer`
       
       a {
         margin: 0 5px;
+        text-decoration: none;
         color: #fff;
         font-size: 20px;
       }
